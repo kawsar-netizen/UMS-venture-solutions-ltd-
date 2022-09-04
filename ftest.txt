@@ -1,0 +1,1 @@
+SELECT * FROM users where [role]='5' and [branch]='2971' and [status_id]='1' 

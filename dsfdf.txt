@@ -1,0 +1,6 @@
+SELECT  [id]
+                                  ,[system_id]
+                                  ,[request_type_name]
+                                  ,[status]
+                                  ,[create_date]
+                              FROM [request_type] where system_id='1016' and id='10074' and status='0'

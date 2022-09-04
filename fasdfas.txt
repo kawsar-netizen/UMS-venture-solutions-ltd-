@@ -1,0 +1,4 @@
+var_dump( checkParameterList('142', '6-142-chk,6-1814-,6-1815-10/12/2021,6-158-') );
+var_dump( checkParameterList('144', '6-142-chk,6-1814-,6-1815-10/12/2021,6-158-') );
+var_dump( checkParameterList('158', '6-142-chk,6-1814-,6-1815-10/12/2021,6-158-') );
+var_dump( checkParameterList('145', '6-142-chk,6-1814-,6-1815-10/12/2021,6-158-') );

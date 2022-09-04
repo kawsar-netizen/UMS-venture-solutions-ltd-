@@ -1,0 +1,1 @@
+SELECT *, bi.name as branch_name FROM users  left join branch_info bi on users.[branch]=bi.[bnk_br_id] where [role]='5' and [branch]='2971' and [status_id]='1' 

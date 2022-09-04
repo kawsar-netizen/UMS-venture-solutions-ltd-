@@ -1,0 +1,2 @@
+SELECT *
+  FROM [branch_info] where bnk_br_id='0026' and has_sub_branch='1'

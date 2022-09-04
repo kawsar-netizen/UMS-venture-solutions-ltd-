@@ -1,0 +1,86 @@
+SELECT
+       r_id.[sl],
+       [req_id],
+       r_id.[status],
+       r_id.[action_status],
+       r_id.[action_status_br_checker],
+       r_id.[br_checker_assign_manual_id],
+       r_id.[br_authorizer],
+       r_id.[recheck_status],
+       r_id.[ho_chkr_aprove_sts_update_date],
+       r_id.[ho_checker_comment],
+       r_id.[ho_decliner],
+       r_id.[br_checker_sts_update_date],
+       [branch_code],
+       [br_maker],
+       [br_checker],
+       [ho_maker],
+       [ho_checker],
+       r_id.[entry_date],
+       r_id.[action_status_ho_maker],
+       r_id.[action_status_ho_checker],
+       r_id.[pk_for_sub_br],
+       r.[sys_id],
+       r.[para_id],
+       r.[value],
+       sys.[para_name],
+       sys.[para_type],
+       s.[system_name],
+        sys.[system_id],
+
+        r_id.[request_type_id],
+    rt.[request_type_name],
+    rt.[system_id] as rt_system_id,
+    r_id.[request_type_value],
+    r_id.[created_user_id],
+    r_id.[created_password],
+    r_id.[ho_maker_remarks],
+    r_id.[ho_authorizer],
+    r_id.[ho_authorize_status],
+    r_id.[canceled_by],
+    r_id.[cancel_reason],
+    r_id.[rechecker],
+    r_id.[br_checker_recheck_reason],
+
+        sys.[para_type],
+       u.[name] as branch_maker_name, 
+       u.[emp_id] as branch_maker_emp_id, 
+       dl.[log_req_maker_role_id] as user_role,
+       u.[division_id],
+       dl.[log_division] as division_name,
+       
+       dl.[log_user_designation] as designation,
+       
+       u.[user_id],
+       u.[id] as user_pk_id,
+       u.[br_pk_id]
+
+    FROM
+       [dbo].[request_id] as r_id 
+       left join
+          request as r 
+          on r.request_id = r_id.req_id 
+       left join
+          [sys_parameters] as sys 
+          on r.para_id = sys.para_id 
+       left join
+          [systems] as s 
+          on s.id = r.sys_id 
+       left join
+          [users] as u 
+
+
+          on r_id.br_maker = u.id
+
+
+          left join designation_log dl
+
+          on r_id.req_id=dl.log_reguest_id
+
+        left join 
+        [request_type] rt
+
+        on r_id.request_type_id = rt.id
+
+
+      where  r_id.branch_code='001'   order by r_id.sl desc  

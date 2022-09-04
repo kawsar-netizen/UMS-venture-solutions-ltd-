@@ -1,0 +1,36 @@
+SELECT
+       r_id.[sl],
+       [req_id],
+       r_id.[status],
+       r_id.[action_status],
+       r_id.[br_checker_assign_manual_id],
+       r_id.[br_authorizer],
+       [branch_code],
+       [br_maker],
+       [br_checker],
+       [ho_maker],
+       [ho_checker],
+       r_id.[entry_date],
+       r.[sys_id],
+       r.[para_id],
+       r.[value],
+       sys.[para_name],
+       sys.[para_type],
+       s.[system_name],
+        sys.[system_id],
+        sys.[para_type],
+       u.[name] as branch_maker_name 
+    FROM
+       [dbo].[request_id] as r_id 
+       left join
+          request as r 
+          on r.request_id = r_id.req_id 
+       left join
+          [sys_parameters] as sys 
+          on r.para_id = sys.para_id 
+       left join
+          [systems] as s 
+          on s.id = r.sys_id 
+       left join
+          [users] as u 
+          on r_id.br_maker = u.id where r_id.req_id='REQ-2' and r_id.sl='2' and  system_id='3' 
