@@ -11729,3 +11729,5 @@ checkRTGSValidation(6, 6-31, 6-158-chk,6-148-chk);
 checkRTGSValidation(6, 6-31, 6-158-chk);
 checkRTGSValidation(6, 6-31, 6-158-chk);
 checkRTGSValidation(6, 6-31, 6-159-chk);
+checkRTGSValidation(6, 6-31, 6-2121-chk);
+checkRTGSValidation(6, 6-31, 6-2120-chk);

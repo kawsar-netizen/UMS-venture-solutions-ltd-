@@ -26,8 +26,8 @@
             <h2><b align="center">User Request Form</b></h2>
             <ol class="breadcrumb">
                 <!-- <li class="breadcrumb-item">
-                                <a href=""><b>User Request Form</b></a>
-                            </li> -->
+                                    <a href=""><b>User Request Form</b></a>
+                                </li> -->
             </ol>
         </div>
         <div class="col-lg-2">
@@ -137,11 +137,11 @@
                                         </div>
 
                                         <!--  <div class="form-group row">
-                                      <label class="col-sm-4 col-form-label"><b> Department </b></label>
-                                      <div class="col-sm-7">
-                                         <input readonly name="" value="{{ $user_form_data->department }}" type="text" class="form-control">
-                                      </div>
-                                   </div> -->
+                                          <label class="col-sm-4 col-form-label"><b> Department </b></label>
+                                          <div class="col-sm-7">
+                                             <input readonly name="" value="{{ $user_form_data->department }}" type="text" class="form-control">
+                                          </div>
+                                       </div> -->
 
                                     </form>
                                 </div>
@@ -510,8 +510,38 @@
                                                 </label>
 
                                             </td>
+                                            <td>
+                                                <label class="checkbox-inline">
+                                                    <input type="checkbox" value="2119" name="2119"
+                                                        onclick="setparameterId('2119','chk',1,'6')">&nbsp;Inter Bank Forex
+                                                    (Branch)
+                                                </label>
+
+                                            </td>
 
                                         </tr>
+
+                                        {{-- Coding by Sizar(Start) --}}
+                                        <tr>
+                                            <td>
+                                                <label class="checkbox-inline">
+                                                    <input type="checkbox" value="2120" name="2120"
+                                                        onclick="setparameterId('2120','chk',1,'6')">&nbsp;Banks
+                                                    Miscellaneous (Branch)
+                                                </label>
+                                            </td>
+
+                                            <td>
+                                                <label class="checkbox-inline">
+                                                    <input type="checkbox" value="2121" name="2121"
+                                                        onclick="setparameterId('2121','chk',1,'6')">&nbsp;Inter Bank Local
+                                                    (Branch)
+                                                </label>
+
+                                            </td>
+                                        </tr>
+
+                                        {{-- Coding by Sizar(End) --}}
 
                                     </table>
 
