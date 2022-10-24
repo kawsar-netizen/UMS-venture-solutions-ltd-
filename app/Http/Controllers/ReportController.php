@@ -861,7 +861,7 @@ $request_array = [];
       $user1 = $user1." and req_name='$user'";
     }
 
-    $data =DB::select("SELECT * from ubs_unlock_request where ".$date.$branch1.$division1.$status1.$user1);
+    $data = DB::select("SELECT * from ubs_unlock_request where ".$date.$branch1.$division1.$status1.$user1);
   
      return view('report.ubs_unlock_report.ubs_unlock_request_generate_data',compact('data'));
   }

@@ -217,8 +217,7 @@
                                         <button onclick="edit_request_type(<?php echo $single_data->id; ?>)"
                                             class="btn btn-sm btn-info">Edit</button>
                                            {{-- coding by kawsar --}}
-                                        <a href="{{ route('request_type_delete', $single_data->id) }}"><button type="submit", class="btn btn-sm btn-danger"onclick="return confirm('Are you sure from delete?')">Delete</button>
-                                        </a>
+                                           <button class="btn btn-sm btn-danger" onclick="delete_request_type(<?php echo $single_data->id; ?>)">Delete</button>
                                     </td>
                                 </tr>
 

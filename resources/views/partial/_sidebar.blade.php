@@ -171,7 +171,7 @@
                 {  
                 ?>
                 <li>
-                  <a href="{{route('ubs_unlock_request_report')}}"><i class="fa fa-cogs"></i> <span class="nav-label">UBS Unlock Report</span></a>
+                  <a href="{{route('ubs_unlock_request_report')}}"><i class="fa fa-file"></i> <span class="nav-label">UBS Unlock Report</span></a>
                 </li>
                 <?php
                 }

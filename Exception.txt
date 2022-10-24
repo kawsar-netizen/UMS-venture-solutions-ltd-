@@ -1,2 +1,2 @@
-Connection could not be established with host 192.168.144.133 :stream_socket_client(): unable to connect to 192.168.144.133:25 (No connection could be made because the target machine actively refused it.
+Connection could not be established with host 192.168.144.133 :stream_socket_client(): unable to connect to 192.168.144.133:25 (A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
 )
